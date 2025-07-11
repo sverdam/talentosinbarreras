@@ -49,6 +49,30 @@ document.querySelectorAll('.accordion-toggle').forEach(btn => {
   });
 });
 
+function initDropdownMenu() {
+  document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+    const menuIcon = dropdown.querySelector('.menu-icon');
+    const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+    console.log("menuIcon:", menuIcon, "dropdownContent:", dropdownContent);
+
+    if (!menuIcon || !dropdownContent) return;
+
+    menuIcon.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdownContent.classList.toggle("show");
+      menuIcon.textContent = dropdownContent.classList.contains("show") ? "×" : "☰";
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdownContent.classList.remove("show");
+        menuIcon.textContent = "☰";
+      }
+    });
+  });
+}
+
 
 
 // ====== SLIDESHOW ======
@@ -78,17 +102,13 @@ function showSlides(n, slideshowId) {
     dots[slideIndices[slideshowId] - 1].classList.add("active");
 }
 
-// Init both slideshows
-document.addEventListener("DOMContentLoaded", () => {
-  ['slideshow1', 'slideshow2'].forEach(id => {
-    slideIndices[id] = 1;
-    showSlides(1, id);
-  });
-});
-
-
 
 // ========== INICIALIZACIÓN GLOBAL ==========
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
+  initDropdownMenu();
+    ['slideshow1', 'slideshow2'].forEach(id => {
+    slideIndices[id] = 1;
+    showSlides(1, id);
+  });
 });

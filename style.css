@@ -24,10 +24,12 @@ html.dark {
 
 select{
   border: none;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 16px;
   font-weight: bold;
-  border-radius: 15px;
   width: fit-content;
-  height: 40px;
+  height: fit-content;
 }
 
 /* =================== BASE =================== */
@@ -169,6 +171,60 @@ nav a {
 
 nav a:hover, .home:hover {
   color: var(--hover-color);
+}
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-icon {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--text-color);
+  user-select: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: var(--bg-color);
+  min-width: 160px;
+  box-shadow: 0 4px 8px #1313133f;
+  z-index: 1001;
+  border-radius: 8px;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.dropdown-content a {
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--hover-color);
+  color: var(--bg-color);
+}
+
+.dropdown-content.show {
+  display: flex;
+}
+
+.theme-selector { 
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .home {

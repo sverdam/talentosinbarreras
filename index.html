@@ -22,22 +22,38 @@
       document.documentElement.classList.add(theme);
     })();
   </script>
+
+  <script src="script.js" defer></script>
 </head>
 
 <body>
   <!-- =================== HEADER =================== -->
-  <header>
-    <div class="margin spacebetween">
-      <div>
-        <a class="home" href="index.html">Talento sin Barreras</a>
-      </div>
-      <nav>
+<header>
+  <div class="margin spacebetween">
+    <div>
+      <a class="home" href="index.html">Talento sin Barreras</a>
+    </div>
+
+    <div class="nav-dropdown">
+      <div class="menu-icon">☰</div>
+      <nav class="dropdown-content">
         <a href="rrhh.html">RRHH</a>
         <a href="derechos.html">Derechos</a>
         <a href="capacitacion.html">Capacitación</a>
+        
+        <div class="theme-selector">
+          <label for="themeSelect">Tema:</label>
+          <select id="themeSelect">
+            <option value="auto">🌐 Automático</option>
+            <option value="light">🌕 Claro</option>
+            <option value="dark">🌑 Oscuro</option>
+          </select>
+        </div>
       </nav>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <!-- =================== SECCION HERO =================== -->
   <section class="margin full-height row">
@@ -46,7 +62,7 @@
       <p>Plataforma de inclusión laboral a personas neurodivergentes y otras discapacidades intelectuales y cognitivas.</p>
       <a href="#conoce-mas" class="btn">Conoce más</a>
     </div>
-    <img src="img1.png" style="height: 60vh;">
+    <img src="img1.png" style="height: 60vh; margin-left: 60px;">
   </section>
 
   <!-- =================== FRASE =================== -->
@@ -119,21 +135,11 @@
 
   <div class="sep"></div>
   
-  <!-- =================== UI MENU =================== -->
-  <div class="margin">
-  <label for="themeSelect"><h3>Choose your theme</h3></label>
-  <select id="themeSelect">
-  <option value="auto">🌐 Automático</option>
-  <option value="light">🌕 Claro</option>
-  <option value="dark">🌑 Oscuro</option>
-  </select>
-  </div>
+
 
   <!-- =================== FOOTER =================== -->
   <footer>
-    <p>© 2025 Todos los derechos reservados.</p>
+    <p> </p>
   </footer>
-
-  <script src="script.js" defer></script>
 </body>
 </html>

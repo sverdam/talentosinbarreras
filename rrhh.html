@@ -22,20 +22,36 @@
       document.documentElement.classList.add(theme);
     })();
   </script>
+
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-    <div class="margin spacebetween">
-        <div>
-        <a class="home" href="index.html">Talento sin Barreras</a>
-        </div>
-        <nav>
+  <!-- =================== HEADER =================== -->
+<header>
+  <div class="margin spacebetween">
+    <div>
+      <a class="home" href="index.html">Talento sin Barreras</a>
+    </div>
+
+    <div class="nav-dropdown">
+      <div class="menu-icon">☰</div>
+      <nav class="dropdown-content">
         <a href="rrhh.html">RRHH</a>
         <a href="derechos.html">Derechos</a>
         <a href="capacitacion.html">Capacitación</a>
-        </nav>
+        
+        <div class="theme-selector">
+          <label for="themeSelect">Tema:</label>
+          <select id="themeSelect">
+            <option value="auto">🌐 Automático</option>
+            <option value="light">🌕 Claro</option>
+            <option value="dark">🌑 Oscuro</option>
+          </select>
+        </div>
+      </nav>
     </div>
-    </header>
+  </div>
+</header>
 
     <section class="margin">
         <div class="full-height column">
@@ -78,7 +94,7 @@
     </section>
 
     <footer>
-        <p>© 2025 Todos los derechos reservados.</p>
+        <p> </p>
     </footer>
 </body>
 </html>
