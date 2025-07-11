@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conoce los Derechos</title>
+
+  <!-- =================== FONTS =================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- =================== STYLESHEET =================== -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- =================== SCRIPT APARIENCIA =================== -->
+  <script>
+    (function() {
+      const pref = localStorage.getItem('theme-preference') || 'auto';
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = pref === 'auto' ? (systemPrefersDark ? 'dark' : 'light') : pref;
+      document.documentElement.classList.add(theme);
+    })();
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="margin spacebetween">
+    <div>
+      <a class="home" href="index.html">Talento sin Barreras</a>
+    </div>
+    <nav>
+      <a href="rrhh.html">RRHH</a>
+      <a href="derechos.html">Derechos</a>
+      <a href="capacitacion.html">Capacitación</a>
+    </nav>
+  </div>
+</header>
+
+<section class="margin">
+  <h2>Inserción Laboral</h2>
+  <p >Es el proceso mediante el cual una persona se incorpora al mercado de trabajo, accediendo a un empleo
+  digno y sostenible. Este proceso no solo implica encontrar un puesto de trabajo, sino también adaptarse
+  al entorno laboral, desarrollar habilidades, y ejercer plenamente sus derechos como trabajador. <br>
+  Cuando hablamos de inserción laboral de personas neurodivergentes o con discapacidad, se hace referencia
+  a crear condiciones justas, inclusivas y accesibles que permitan su participación efectiva en entornos
+  laborales, eliminando barreras y ofreciendo los ajustes razonables necesarios.</p>
+</section>
+
+  <div class="sep"></div>
+
+<section class="margin">
+  <h2>Derechos Laborales</h2>
+  <p>Un entorno inclusivo en el trabajo es aquel que reconoce, respeta y valora las diferencias de cada persona,
+  asegurando que todas tengan igualdad de oportunidades para participar, crecer y contribuir. <br>
+  Incluye ajustes razonables para personas neurodivergentes o con discapacidad, como:<br>
+  procesos de reclutamiento adaptados,<br>
+  comunicación clara,<br>
+  sensibilización del personal,<br>
+  espacios accesibles y libres de discriminación.<br>
+  La inclusión no es solo permitir entrar, es garantizar que todas las personas puedan permanecer
+  y desarrollarse dignamente.</p>
+  <div class="sep"></div>
+  <p>Principales leyes y convenios que protegen a las personas neurodivergentes en el trabajo
+  Ley Federal del Trabajo (México)
+  Artículo 2:
+  Reconoce el trabajo como un derecho y un deber social, que debe realizarse en condiciones que aseguren la vida digna y el respeto de las libertades y la dignidad de la persona. Prohíbe toda forma de discriminación, incluyendo por discapacidad.
+  Artículo 3:
+  Promueve el principio de igualdad sustantiva en el trabajo, y obliga a los empleadores a garantizar entornos libres de violencia, acoso y exclusión.
+  </p>
+  <div class="sep"></div>
+  <p>Convención sobre los Derechos de las Personas con Discapacidad (ONU)
+  Artículo 27 – Trabajo y empleo:
+  Reconoce el derecho de las personas con discapacidad a trabajar en igualdad de condiciones con las demás. Obliga a los Estados a:
+  Prohibir la discriminación laboral por motivos de discapacidad.
+  Garantizar ajustes razonables.
+  Promover empleo inclusivo en sector público y privado.
+  Fomentar programas de inclusión y capacitación.
+
+  México ratificó esta convención en 2007, por lo que tiene validez legal en el país.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

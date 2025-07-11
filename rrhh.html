@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz para RRHH</title>
+
+  <!-- =================== FONTS =================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- =================== STYLESHEET =================== -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- =================== SCRIPT APARIENCIA =================== -->
+  <script>
+    (function() {
+      const pref = localStorage.getItem('theme-preference') || 'auto';
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = pref === 'auto' ? (systemPrefersDark ? 'dark' : 'light') : pref;
+      document.documentElement.classList.add(theme);
+    })();
+  </script>
+</head>
+<body>
+    <header>
+    <div class="margin spacebetween">
+        <div>
+        <a class="home" href="index.html">Talento sin Barreras</a>
+        </div>
+        <nav>
+        <a href="rrhh.html">RRHH</a>
+        <a href="derechos.html">Derechos</a>
+        <a href="capacitacion.html">Capacitación</a>
+        </nav>
+    </div>
+    </header>
+
+    <section class="margin">
+        <div class="full-height column">
+            <h2>Recursos Humanos: Inserción Laboral</h2>
+            <p>Quiz para área de Recursos Humanos enfocado en evaluar conocimientos y sensibilización de
+                inserción laboral de personas neurodivergentes.</p>
+            <img src="resources/quiz.png" style="height: 100px;">
+            <div class="sep"></div>
+
+            <h3>Objetivo</h3>
+            <p style="font-size: 20px;">Evaluar el nivel de conocimiento, actitudes y buenas prácticas en torno a la inclusión laboral 
+                de personas neurodivergentes, por ejemplo, con autismo, TDAH, etc.</p>
+            <a href="#quiz" class="btn" onclick="document.getElementById('quiz').style.display='block'">Iniciar Quiz</a>
+        </div>
+
+        <div class="sep"></div>
+
+        <div id="quiz" class="quiz">
+            <iframe data-tally-src="https://tally.so/embed/31YxE1?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2784" frameborder="0" marginheight="0" marginwidth="0" title="Sensibilización de inserción laboral de personas neurodivergentes."></iframe>
+            <script>
+            var d = document,
+                w = "https://tally.so/widgets/embed.js",
+                v = function () {
+                    "undefined" != typeof Tally
+                    ? Tally.loadEmbeds()
+                    : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function (e) {
+                        e.src = e.dataset.tallySrc;
+                        });
+                };
+            if ("undefined" != typeof Tally) v();
+            else if (d.querySelector('script[src="' + w + '"]') == null) {
+                var s = d.createElement("script");
+                s.src = w;
+                s.onload = v;
+                s.onerror = v;
+                d.body.appendChild(s);
+            }
+            </script>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

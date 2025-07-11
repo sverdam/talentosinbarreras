@@ -1,0 +1,324 @@
+:root,
+html.light {
+  --bg-color: #f0e8de;
+  --text-color: #262626;
+  --hover-color: #73277b;
+  --acccent-color: #aa8eab;
+  --quote-bg: linear-gradient(to right,#f79829,#ec1a71,#73277b);
+}
+
+html.dark {
+  --bg-color: #262626;
+  --text-color: #f0e8de;
+  --hover-color: #94c4c1;
+  --acccent-color: #94c4c1;
+  --quote-bg: linear-gradient(to right,#73277b,#ec1a71,#f79829);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+select{
+  border: none;
+  font-weight: bold;
+  border-radius: 15px;
+  width: fit-content;
+  height: 40px;
+}
+
+/* =================== BASE =================== */
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color)
+}
+
+/* =================== TIPOGRAFÍA =================== */
+h1 {
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 34px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* =================== LAYOUT =================== */
+.margin {
+  margin: 0 70px;
+}
+
+.spacebetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.full-height {
+  height: 90vh;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.left-text {
+  text-align: left;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.justify-text {
+  text-align: justify;
+}
+
+/* =================== ESTRUCTURA =================== */
+header {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+footer {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+  color: var(--bg-color);
+}
+
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25vw;
+}
+
+nav a {
+  color: var(--text-color);
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover, .home:hover {
+  color: var(--hover-color);
+}
+
+.home {
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.video-container {
+  width: 100vw;
+  height: 70vh;
+  background-color: gray;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.quiz {
+  display: none;
+  background-color: #f0e8de;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+/* =================== DECORACIÓN =================== */
+.quote {
+  background: var(--quote-bg);
+  color: var(--bg-color);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: fit-content;
+  width: 100%;
+  padding: 50px;
+  margin-top: 4rem;
+}
+
+.sep {
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+}
+
+.slideshow-container {
+  height: fit-content;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #262626;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev {
+  left: 0px;
+}
+
+.next {
+  right: 0px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: var(--acccent-color);
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: var(--acccent-color);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/* =================== DESPLEGABLES =================== */
+.accordion-item {
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.accordion-toggle {
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0rem 0rem;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 1.5rem;
+  background-color: var(--bg-colors);
+  color: var(--text-color);
+}
+
+.accordion-content.active {
+  max-height: fit-content;
+  padding: 1.5rem;
+}
+
+.accordion-toggle .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+
+

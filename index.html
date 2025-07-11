@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talento sin Barreras</title>
+
+  <!-- =================== FONTS =================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- =================== STYLESHEET =================== -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- =================== SCRIPT APARIENCIA =================== -->
+  <script>
+    (function() {
+      const pref = localStorage.getItem('theme-preference') || 'auto';
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = pref === 'auto' ? (systemPrefersDark ? 'dark' : 'light') : pref;
+      document.documentElement.classList.add(theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- =================== HEADER =================== -->
+  <header>
+    <div class="margin spacebetween">
+      <div>
+        <a class="home" href="index.html">Talento sin Barreras</a>
+      </div>
+      <nav>
+        <a href="rrhh.html">RRHH</a>
+        <a href="derechos.html">Derechos</a>
+        <a href="capacitacion.html">Capacitación</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =================== SECCION HERO =================== -->
+  <section class="margin full-height row">
+    <div>
+      <h1>Talento sin Barreras</h1>
+      <p>Plataforma de inclusión laboral a personas neurodivergentes y otras discapacidades intelectuales y cognitivas.</p>
+      <a href="#conoce-mas" class="btn">Conoce más</a>
+    </div>
+    <img src="resources/img1.png" style="height: 60vh;">
+  </section>
+
+  <!-- =================== FRASE =================== -->
+  <div id="conoce-mas"></div>
+  <div class="quote">
+    <h3>“La inclusión comienza cuando aprendemos a valorar las diferencias”</h3>
+  </div>
+
+  <div class="sep"></div>
+
+  <!-- =================== INTRO =================== -->
+  <section class="margin">
+    <div>
+      <p>Bienvenide a esta plataforma creada para promover la inserción laboral digna y respetuosa 
+        de personas neuro divergentes. Aquí encontrarás recursos, ejemplos, guías y conocimientos 
+        para crear espacios de trabajo más humanos, accesibles y diversos.</p>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- =================== VIDEO EMBEDED =================== -->
+  <section class="video-container">
+    <div>
+      <h3>video</h3>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- =================== CASOS DE ÉXITO =================== -->
+  <section class="margin">
+    <div>
+      <h2>Casos de éxito</h2>
+      <p>Estas organizaciones han transformado su cultura laboral apostando por el talento
+        neurodivergente. Aquí puedes conocer sus historias:</p>
+    </div>
+    <div class="sep"></div>
+    <div>
+      <h3>SAP “Autism at work” (2013)</h3>
+      <p>Acciones destacadas: Eliminación de entrevistas tradicionales enfocadas en habilidades sociales,
+        fortalecimiento de onboarding y coaching a managers, alianzas con organizaciones expertas como SpArc
+        Philadelphia<br>Resultados: Retención del 94 %, presencia en 7 países inicialmente y más de 160 personas
+        con autismo empleada. <br> Beneficios: Reducción de costos de rotación, mayor innovación y creatividad en equipos .</p>
+    </div>
+    <div class="sep"></div>
+    <div>
+      <h3>Microsoft “Neurodiversity Hiring Program” (2015)</h3>
+      <p>Acciones: Proceso de selección alternativo vía cohortes de 5 días, evaluations técnicas, webinars, y
+        entrenamiento para managers. <br> Resultados: Más de 150 empleados neurodivergentes incorporados, expansión a roles en centros de datos. Mejora en cultura inclusiva y prácticas de gestión.</p>
+    </div>
+    <div class="sep"></div>
+    <div>
+      <h3>JPMorgan Chase "Autism at Work” (2015)</h3>
+      <p>Hallazgos: Empleados en espectro autista en el programa piloto fueron 48% más productivos que colegas
+        neurotípicos, con menos errores.<br>Escalamiento: Más de 220 empleados participantes y reconocimiento de
+        impacto positivo en productividad.</p>
+    </div>
+  </section>
+
+  <div class="sep"></div>
+
+  <!-- =================== CALL TO ACTION =================== -->
+  <section class="margin column">
+    <div>
+      <p>Tu empresa también puede tener éxito siendo Neuroinclusiva. Realiza el Quiz para RRHH.</p>
+    </div>
+    <a href="rrhh.html" class="btn">Tomar Quiz</a>
+  </section>
+
+  <div class="sep"></div>
+  
+  <!-- =================== UI MENU =================== -->
+  <div class="margin">
+  <label for="themeSelect"><h3>Choose your theme</h3></label>
+  <select id="themeSelect">
+  <option value="auto">🌐 Automático</option>
+  <option value="light">🌕 Claro</option>
+  <option value="dark">🌑 Oscuro</option>
+  </select>
+  </div>
+
+  <!-- =================== FOOTER =================== -->
+  <footer>
+    <p>© 2025 Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
