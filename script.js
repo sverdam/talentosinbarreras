@@ -4,13 +4,21 @@ const themeSelect = document.getElementById('themeSelect');
 function applyTheme(mode) {
   document.documentElement.classList.remove('light', 'dark');
 
-  if (mode === 'auto') {
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    document.documentElement.classList.add(systemDark ? 'dark' : 'light');
-  } else {
-    document.documentElement.classList.add(mode);
-  }
+  const themeImage = document.getElementById('themeImage'); // e.g., img1
+  const img2 = document.getElementById('img2');
+  const img3 = document.getElementById('img3');
+
+  const isDark = mode === 'dark' || (mode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+  document.documentElement.classList.add(isDark ? 'dark' : 'light');
+
+  // Swap images based on theme
+  if (themeImage) themeImage.src = isDark ? 'dark1.png' : 'light1.png';
+  if (img2)       img2.src       = isDark ? 'dark2.png' : 'light2.png';
+  if (img3)       img3.src       = isDark ? 'dark3.png' : 'light3.png';
 }
+
+
 
 function savePreference(value) {
   localStorage.setItem('theme-preference', value);

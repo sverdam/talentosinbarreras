@@ -69,6 +69,9 @@ p {
   margin-bottom: 5px;
 }
 
+ul {
+  margin-left: 20px;
+}
 /* =================== LAYOUT =================== */
 .margin {
   margin: 0 70px;
@@ -236,16 +239,6 @@ nav a:hover, .home:hover {
 }
 
 
-.video-container {
-  width: 100vw;
-  height: 70vh;
-  background-color: gray;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  color: var(--text-color);
-}
-
 .quiz {
   display: none;
   background-color: #f0e8de;
@@ -276,10 +269,21 @@ nav a:hover, .home:hover {
 }
 
 .slideshow-container {
-  height: fit-content;
-  width: fit-content;
-  margin: auto;
   position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.slideshow-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  border: 0;
 }
 
 .prev, .next {
@@ -289,13 +293,14 @@ nav a:hover, .home:hover {
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: #262626;
+  color: var(--text-color);
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
+
 
 .prev {
   left: 0px;
@@ -377,4 +382,81 @@ nav a:hover, .home:hover {
 }
 
 
+/* =================== TELEFONOS =================== */
+@media (max-width: 768px) {
+  /* Stack row elements vertically */
+  .row {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .margin {
+    margin: 0 20px;
+  }
+
+  .full-height {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  nav {
+    width: 100%;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+
+  .theme-selector {
+    text-align: left;
+    padding: 1rem;
+  }
+
+  img, picture > img {
+    max-width: 100%;
+    height: auto !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+.slideshow-container iframe {
+  width: 80%;
+}
+.prev, .next {
+  top: 50%;
+  transform: none;
+  font-size: 16px;
+}
+
+.prev {
+  left:-4px;
+}
+
+.next {
+  right:-4px;
+}
+}
 
